@@ -4,9 +4,9 @@ namespace helloApp {
 
     public class Calulator{
 
-        int num1;
-        int num2;
-        int res;
+        int num1 = 0;
+        int num2 = 0;
+        int res = 0;
 
         public void add(){
             Console.WriteLine("Program for addition of 2 numbers.");
@@ -17,6 +17,7 @@ namespace helloApp {
             num2 = int.Parse(Console.ReadLine());
 
             res = num1 + num2;
+
 
             Console.WriteLine($"The addition of {num1} and {num2} is : {res}");
 
@@ -30,7 +31,7 @@ namespace helloApp {
             Console.WriteLine("Enter num2 : ");
             num2 = int.Parse(Console.ReadLine());
 
-            res = num1 - num2;
+            res = num2 - num1;
 
             Console.WriteLine($"The subtraction of {num1} from {num2} is : {res}");
 
@@ -85,8 +86,8 @@ namespace helloApp {
 
         public void ar_circle(){
             Console.WriteLine("Program for area of circle.");
-            float radius;
-            float area;
+            float radius = 0;
+            float area = 0;
             
             Console.WriteLine("Enter the radius of circle : ");
             radius = float.Parse(Console.ReadLine());
@@ -132,14 +133,14 @@ namespace helloApp {
         }
 
         public void greatest(){
-            Console.WriteLine("Program to find the greatest of 2 numbers.");
+            Console.WriteLine("Program to find the greatest of 3 numbers.");
             Console.WriteLine("Enter num1 : ");
             num1 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter num2 : ");
             num2 = int.Parse(Console.ReadLine());
 
-            int num3;
+            int num3 = 0;
 
             Console.WriteLine("Enter num3 : ");
             num3 = int.Parse(Console.ReadLine());
@@ -177,6 +178,66 @@ namespace helloApp {
             }
 
 
+        }
+
+        public void check_vowel(){
+            Console.WriteLine("To check if a character is vowel or not.");
+
+            char c = 'k';
+
+            Console.WriteLine("Enter the character : ");
+            c = char.Parse(Console.ReadLine());
+
+            switch(c){
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    Console.WriteLine($"The character '{c}' is a vowel.");
+                    break;
+                default:
+                    Console.WriteLine($"The character '{c}' is not a vowel.");
+                    break;
+
+            }
+
+        }
+
+        public void str_operation(){
+            Console.WriteLine("To check if a character is vowel or not.");
+
+            string s = string.Empty;
+            Console.WriteLine("Enter the string : ");
+            s = Console.ReadLine();
+
+            Console.WriteLine($"Original string length: {s.Length}");
+            Console.WriteLine($"Uppercase string: {s.ToUpper()}");
+
+        }
+
+        public void swap_vari(){
+            Console.WriteLine("To swap 2 variable without temp vatiable.");
+
+            Console.WriteLine("Enter num1 : ");
+            num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter num2 : ");
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Before swap: a = {num1}, b = {num2}");
+            num1 += num2;
+            num2  = num1 - num2;
+            num1 -= num2;
+            Console.WriteLine($"After swap: a = {num1}, b = {num2}");
+            
+
+            
         }
 
     }
