@@ -1,4 +1,3 @@
-
 using System;
 
 namespace helloApp{
@@ -241,6 +240,86 @@ namespace helloApp{
 
         }
 
+        public void f12(){
+            Console.WriteLine("To find multiple of 17 in a give range ");
+            int n1 = 0;
+            Console.WriteLine("Enter n1: ");
+            n1 = int.Parse(Console.ReadLine());
+
+            int n2 = 0;
+            Console.WriteLine("Enter n1: ");
+            n2 = int.Parse(Console.ReadLine());
+            
+            
+
+            for(int i=n1;i<=n2;i+=2){
+                if(i % 17 == 0){
+                    Console.WriteLine(i);
+        
+                }
+            }
+
+        }
+
+
+        public void f13(){
+            Console.WriteLine("To find sum of digits of a number ");
+            int n1 = 0;
+            Console.Write("Enter a Number: ");
+            n1 = int.Parse(Console.ReadLine());
+
+            int res = 0;
+            while (n1 > 0){
+                res += n1 % 10;
+                n1 /= 10;
+            }
+
+            Console.WriteLine($"\nSum of Digits of the Number: {res}");
+
+        }
+
+        public void f14()
+        {
+            Console.WriteLine("To print pyrammid of numbers "); 
+            int rows = 5;
+            for (int i = 1; i <= rows; i++)
+            {
+                for (int space = 1; space <= rows - i; space++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+
+        public void f15()
+        {
+            Console.WriteLine("To print pyrammid ");   
+            for(int i = 1; i <= 5; i++)
+            {
+                for(int j = 0; j < 5 - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for(int j =1;j<= i; j++)
+                {
+                    Console.Write("*" + " ");
+                }
+                Console.Write("\n");
+            }
+        }
+
+        
+
+
+
 
 
 
@@ -252,3 +331,11 @@ namespace helloApp{
         
     }
 }
+
+
+
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
+// 1 2 3 4 5
