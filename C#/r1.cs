@@ -311,3 +311,145 @@ namespace helloApp
     }
 
 }
+
+
+
+
+namespace helloApp
+{
+    public class Code1
+    {
+        public void f1()
+        {
+            Console.WriteLine($"Progrm to check ita leap year or not");
+            
+            int year = 0;
+            Console.WriteLine($"Enter the year : ");
+            year = int.Parse(Console.ReadLine());
+
+            if (year % 4 == 0 && year % 100 != 0 ||  year % 400 == 0)
+            {
+                Console.WriteLine($"{year} is a leap year.");
+            }
+            else
+            {
+                Console.WriteLine($"{year} is not a leap year.");
+            }
+
+        }
+
+        public void f2()
+        {
+            Console.WriteLine($"Progrm to convert celcius to fahrenheit.");
+            
+            int celcius = 0;
+            Console.WriteLine($"Enter the year : ");
+            celcius = int.Parse(Console.ReadLine());
+
+            float fahrenheit = 1.8f * celcius + 32 ;
+
+            Console.WriteLine($"Temperature in Celcius : {celcius}");
+            Console.WriteLine($"Temperature in Fahrenheit : {fahrenheit}");
+
+
+        }
+
+        public void f3()
+        {
+            Console.WriteLine($"Progrm to check the gradeof a student");
+            
+            int score = 0;
+            Console.WriteLine($"Enter the score : ");
+            score = int.Parse(Console.ReadLine());
+
+            if (score >= 90)
+            {
+                Console.WriteLine($"Grade : A");
+            }
+            else if (score < 90 && score >= 80)
+            {
+                Console.WriteLine($"Grade : B");
+            }
+            else if (score < 80 && score >= 70)
+            {
+                Console.WriteLine($"Grade : C");
+            }
+            else if (score < 70 && score >= 60)
+            {
+                Console.WriteLine($"Grade : D");
+            }
+            else
+            {
+                Console.WriteLine($"Grade : F");
+            }
+
+        }
+
+        public static int Fact(int x)
+        {
+            int res = 1;
+            while (x > 1)
+            {
+                res *= x;
+                x --;
+            }
+
+            return res;
+        }
+
+        public void f4()
+        {
+            Console.WriteLine($"Progrm to find the factorail");
+            string n = string.Empty;
+            do
+            {
+                
+                Console.WriteLine($"Enter the score : ");
+                n = Console.ReadLine();
+
+                if (int.Parse(n) < 0)
+                {
+                    Console.WriteLine($"There is no factorial of negative numbers. ");
+                    continue;
+                }
+
+                Console.WriteLine($"There is  factorial of {n} is : {Fact(int.Parse(n))} ");
+
+
+            }while (n != "q");
+                
+            
+            
+        }
+
+        public void f5(){
+            Console.WriteLine("To print sum first natural n numbers.");
+            int n = 0;
+            Console.WriteLine("Enter n: ");
+            n = int.Parse(Console.ReadLine());
+            int res = 0;
+            for(int i=1;i<=n;i++){
+                res += i;
+            }
+            Console.WriteLine($"the sum of first {n} natural number is: {res} ");
+
+        }
+        public void f6(){
+            Console.WriteLine("To find first n even numbers .");
+            int n = 0;
+            Console.WriteLine("Enter n: ");
+            n = int.Parse(Console.ReadLine());
+
+            
+
+            for(int i=1;i<=n;i++){
+                Console.WriteLine(2 * i);
+            }
+
+        }
+
+
+
+        
+    }
+}
